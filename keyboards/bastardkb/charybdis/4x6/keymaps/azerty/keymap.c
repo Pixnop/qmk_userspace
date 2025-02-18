@@ -15,6 +15,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 #include QMK_KEYBOARD_H
+#include "quantum/keymap_extras/keymap_french.h"
 
 #ifdef CHARYBDIS_AUTO_POINTER_LAYER_TRIGGER_ENABLE
 #    include "timer.h"
@@ -27,24 +28,10 @@ enum charybdis_keymap_layers {
     LAYER_POINTER,
 };
 
-#define CHARYBDIS_AUTO_SNIPING_ON_LAYER LAYER_POINTER
-
-#ifdef CHARYBDIS_AUTO_POINTER_LAYER_TRIGGER_ENABLE
-static uint16_t auto_pointer_layer_timer = 0;
-
-#    ifndef CHARYBDIS_AUTO_POINTER_LAYER_TRIGGER_TIMEOUT_MS
-#        define CHARYBDIS_AUTO_POINTER_LAYER_TRIGGER_TIMEOUT_MS 1000
-#    endif
-
-#    ifndef CHARYBDIS_AUTO_POINTER_LAYER_TRIGGER_THRESHOLD
-#        define CHARYBDIS_AUTO_POINTER_LAYER_TRIGGER_THRESHOLD 8
-#    endif
-#endif
-
 #define LOWER MO(LAYER_LOWER)
 #define RAISE MO(LAYER_RAISE)
-#define PT_W LT(LAYER_POINTER, KC_Z)
-#define PT_SLSH LT(LAYER_POINTER, KC_COLN)
+#define PT_W LT(LAYER_POINTER, FR_W)
+#define PT_SLSH LT(LAYER_POINTER, FR_COLN)
 
 #ifndef POINTING_DEVICE_ENABLE
 #    define DRGSCRL KC_NO
@@ -57,13 +44,13 @@ static uint16_t auto_pointer_layer_timer = 0;
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [LAYER_BASE] = LAYOUT(
   // ╭──────────────────────────────────────────────────────╮ ╭──────────────────────────────────────────────────────╮
-        KC_ESC,    KC_1,    KC_2,    KC_3,    KC_4,    KC_5,       KC_6,    KC_7,    KC_8,    KC_9,    KC_0, KC_MINS,
+        KC_ESC, FR_AMPR, FR_EACU, FR_DQUO, FR_QUOT, FR_LPRN,    FR_MINS, FR_EGRV, FR_UNDS, FR_CCED, FR_AGRV, FR_RPRN,
   // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
-        KC_TAB,    KC_A,    KC_Z,    KC_E,    KC_R,    KC_T,       KC_Y,    KC_U,    KC_I,    KC_O,    KC_P, KC_RBRC,
+        KC_TAB,    FR_A,    FR_Z,    FR_E,    FR_R,    FR_T,       FR_Y,    FR_U,    FR_I,    FR_O,    FR_P, FR_CIRC,
   // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
-       KC_LSFT,    KC_Q,    KC_S,    KC_D,    KC_F,    KC_G,       KC_H,    KC_J,    KC_K,    KC_L,    KC_M, KC_NUHS,
+       KC_LSFT,    FR_Q,    FR_S,    FR_D,    FR_F,    FR_G,       FR_H,    FR_J,    FR_K,    FR_L,    FR_M, FR_UGRV,
   // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
-       KC_LCTL,    PT_W,    KC_X,    KC_C,    KC_V,    KC_B,       KC_N,    KC_M, KC_COMM, KC_SCLN, KC_COLN, KC_RALT,
+       KC_LCTL,    PT_W,    FR_X,    FR_C,    FR_V,    FR_B,       FR_N, FR_COMM, FR_SCLN, FR_COLN, FR_EXLM, KC_RALT,
   // ╰──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────╯
                                    KC_LGUI, KC_SPC,   LOWER,      RAISE,  KC_ENT,
                                            KC_LALT, KC_BSPC,     KC_DEL
@@ -72,13 +59,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [LAYER_LOWER] = LAYOUT(
   // ╭──────────────────────────────────────────────────────╮ ╭──────────────────────────────────────────────────────╮
-       KC_GRV,  KC_EXLM,   KC_AT, KC_HASH,  KC_DLR, KC_PERC,    KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN, KC_UNDS,
+       FR_SUP2,     FR_1,    FR_2,    FR_3,    FR_4,    FR_5,       FR_6,    FR_7,    FR_8,    FR_9,    FR_0, FR_DEG,
   // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
-       RGB_MOD, XXXXXXX, XXXXXXX, KC_EURO, KC_SECT, XXXXXXX,    KC_LCBR,   KC_P7,   KC_P8,   KC_P9, KC_RCBR, KC_BSLS,
+       RGB_MOD, XXXXXXX, XXXXXXX, FR_EURO, FR_SECT, XXXXXXX,    FR_LCBR,   KC_P7,   KC_P8,   KC_P9, FR_RCBR, FR_BSLS,
   // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
-       RGB_TOG, KC_PIPE, KC_TILD, KC_LCTL, KC_LSFT, XXXXXXX,    KC_PPLS,   KC_P4,   KC_P5,   KC_P6, KC_PMNS, KC_PEQL,
+       RGB_TOG, FR_PIPE, FR_TILD, KC_LCTL, KC_LSFT, XXXXXXX,    KC_PPLS,   KC_P4,   KC_P5,   KC_P6, KC_PMNS, FR_PERC,
   // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
-      RGB_RMOD, KC_LABK, KC_RABK, KC_COPY,KC_PASTE, XXXXXXX,    KC_PAST,   KC_P1,   KC_P2,   KC_P3, KC_PSLS, KC_PDOT,
+      RGB_RMOD, FR_LABK, FR_RABK, KC_COPY,KC_PASTE, XXXXXXX,    KC_PAST,   KC_P1,   KC_P2,   KC_P3, KC_PSLS, FR_DOT,
   // ╰──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────╯
                                   XXXXXXX, XXXXXXX, _______,    XXXXXXX, _______,
                                            XXXXXXX, XXXXXXX,      KC_P0
@@ -89,11 +76,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // ╭──────────────────────────────────────────────────────╮ ╭──────────────────────────────────────────────────────╮
         KC_F12,   KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,      KC_F6,   KC_F7,   KC_F8,   KC_F9,  KC_F10,  KC_F11,
   // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
-       KC_MNXT, KC_AGRV, KC_EACU, KC_EGRV, KC_ECIR, XXXXXXX,    XXXXXXX, KC_UGRV, KC_ICIR, KC_OCIR, XXXXXXX, KC_VOLU,
+       KC_MNXT, FR_AGRV, FR_EACU, FR_EGRV, FR_CIRC, XXXXXXX,    XXXXXXX, FR_UGRV, FR_DIAE, XXXXXXX, XXXXXXX, KC_VOLU,
   // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
        KC_MPLY, KC_LEFT,   KC_UP, KC_DOWN, KC_RGHT, XXXXXXX,    XXXXXXX, KC_RSFT, KC_RCTL, KC_RALT, KC_RGUI, KC_MUTE,
   // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
-       KC_MPRV, KC_HOME, KC_PGUP, KC_PGDN,  KC_END, XXXXXXX,    XXXXXXX, KC_ACUT, KC_CCED, KC_QUOT, KC_DQUO, KC_VOLD,
+       KC_MPRV, KC_HOME, KC_PGUP, KC_PGDN,  KC_END, XXXXXXX,    XXXXXXX, FR_GRV, FR_CCED, FR_QUOT, FR_DQUO, KC_VOLD,
   // ╰──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────╯
                                   _______, _______, XXXXXXX,    _______, XXXXXXX,
                                            _______, _______,    XXXXXXX
