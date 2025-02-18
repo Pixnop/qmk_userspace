@@ -45,7 +45,7 @@
 
  #define LOWER MO(LAYER_LOWER)
  #define RAISE MO(LAYER_RAISE)
- #define PT_W LT(LAYER_POINTER, BP_W)
+ #define PT_ECIR LT(LAYER_POINTER, BP_ECIR)
  #define PT_F LT(LAYER_POINTER, BP_F)
 
  #ifndef POINTING_DEVICE_ENABLE
@@ -57,62 +57,62 @@
 
  // clang-format off
  const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-    [LAYER_BASE] = LAYOUT(
-    // ╭──────────────────────────────────────────────────────╮ ╭──────────────────────────────────────────────────────╮
-          KC_ESC,  BP_DLR, BP_DQUO, BP_LDAQ, BP_RDAQ, BP_LPRN,    BP_RPRN,   BP_AT, BP_PLUS, BP_MINS, BP_SLSH, BP_ASTR,
-    // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
-          KC_TAB,     BP_B, BP_EACU,    BP_P,    BP_O, BP_EGRV,    BP_DCIR,    BP_V,    BP_D,    BP_L,    BP_J,    BP_W,
-    // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
-         KC_LSFT,     BP_A,    BP_U,    BP_I,    BP_E, BP_COMM,       BP_C,    BP_T,    BP_S,    BP_R,    BP_N,    BP_M,
-    // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
-         KC_LCTL,    PT_W,    BP_Y,    BP_X,  BP_DOT,    BP_K,    BP_QUOT,    BP_Q,    BP_G,    BP_H,    PT_F, KC_LALT,
-    // ╰──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────╯
-                                     KC_LGUI, KC_SPC,   LOWER,      RAISE,  KC_ENT,
-                                             KC_LALT, KC_BSPC,     KC_DEL
-    //                            ╰───────────────────────────╯ ╰──────────────────╯
-    ),
+   [LAYER_BASE] = LAYOUT(
+   // ╭──────────────────────────────────────────────────────╮ ╭──────────────────────────────────────────────────────╮
+         KC_ESC,  BP_DLR, BP_DQUO, BP_LDAQ, BP_RDAQ, BP_LPRN,    BP_RPRN,   BP_AT, BP_PLUS, BP_MINS, BP_SLSH, BP_ASTR,
+   // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
+         KC_TAB,     BP_B, BP_EACU,    BP_P,    BP_O, BP_EGRV,    BP_DCIR,    BP_V,    BP_D,    BP_L,    BP_J,    BP_W,
+   // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
+        KC_LSFT,     BP_A,    BP_U,    BP_I,    BP_E, BP_COMM,       BP_C,    BP_T,    BP_S,    BP_R,    BP_N,    BP_M,
+   // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
+        KC_LCTL,  PT_ECIR, BP_AGRV,    BP_Y,    BP_X,  BP_DOT,       BP_K, BP_QUOT,    BP_Q,    BP_G,    BP_H,    PT_F,
+   // ╰──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────╯
+                                    KC_LGUI, KC_SPC,   LOWER,      RAISE,  KC_ENT,
+                                            KC_LALT, KC_BSPC,     KC_DEL
+   //                            ╰───────────────────────────╯ ╰──────────────────╯
+   ),
 
    [LAYER_LOWER] = LAYOUT(
    // ╭──────────────────────────────────────────────────────╮ ╭──────────────────────────────────────────────────────╮
-        KC_TILD,    BP_1,    BP_2,    BP_3,    BP_4,    BP_5,       BP_6,    BP_7,    BP_8,    BP_9,    BP_0, BP_DEG,
+         KC_TILD,    BP_1,    BP_2,    BP_3,    BP_4,    BP_5,       BP_6,    BP_7,    BP_8,    BP_9,    BP_0, BP_DEG,
    // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
-        RGB_MOD, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,    BP_LBRC,   KC_P7,   KC_P8,   KC_P9, BP_RBRC, XXXXXXX,
+         RGB_MOD, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,    BP_LBRC,   KC_P7,   KC_P8,   KC_P9, BP_RBRC, XXXXXXX,
    // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
-        RGB_TOG, KC_LGUI, KC_LALT, KC_LCTL, KC_LSFT, XXXXXXX,    BP_PLUS,   KC_P4,   KC_P5,   KC_P6, BP_MINS, BP_EQL,
+         RGB_TOG, KC_LGUI, KC_LALT, KC_LCTL, KC_LSFT, XXXXXXX,    BP_PLUS,   KC_P4,   KC_P5,   KC_P6, BP_MINS, BP_EQL,
    // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
-       RGB_RMOD, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,    BP_ASTR,   KC_P1,   KC_P2,   KC_P3, BP_SLSH, BP_DOT,
+        RGB_RMOD, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,    BP_ASTR,   KC_P1,   KC_P2,   KC_P3, BP_SLSH, BP_DOT,
    // ╰──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────╯
-                                   XXXXXXX, XXXXXXX, _______,    XXXXXXX, _______,
+                                    XXXXXXX, XXXXXXX, _______,    XXXXXXX, _______,
                                             XXXXXXX, XXXXXXX,      KC_P0
    //                            ╰───────────────────────────╯ ╰──────────────────╯
    ),
 
    [LAYER_RAISE] = LAYOUT(
    // ╭──────────────────────────────────────────────────────╮ ╭──────────────────────────────────────────────────────╮
-         KC_F12,   KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,      KC_F6,   KC_F7,   KC_F8,   KC_F9,  KC_F10,  KC_F11,
+          KC_F12,   KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,      KC_F6,   KC_F7,   KC_F8,   KC_F9,  KC_F10,  KC_F11,
    // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
-        KC_MNXT, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_VOLU,
+         KC_MNXT, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_VOLU,
    // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
-        KC_MPLY, KC_LEFT,   KC_UP, KC_DOWN, KC_RGHT, XXXXXXX,    XXXXXXX, KC_RSFT, KC_RCTL, KC_RALT, KC_RGUI, KC_MUTE,
+         KC_MPLY, KC_LEFT,   KC_UP, KC_DOWN, KC_RGHT, XXXXXXX,    XXXXXXX, KC_RSFT, KC_RCTL, KC_RALT, KC_RGUI, KC_MUTE,
    // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
-        KC_MPRV, KC_HOME, KC_PGUP, KC_PGDN,  KC_END, XXXXXXX,    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_VOLD,
+         KC_MPRV, KC_HOME, KC_PGUP, KC_PGDN,  KC_END, XXXXXXX,    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_VOLD,
    // ╰──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────╯
-                                   _______, _______, XXXXXXX,    _______, XXXXXXX,
+                                    _______, _______, XXXXXXX,    _______, XXXXXXX,
                                             _______, _______,    XXXXXXX
    //                            ╰───────────────────────────╯ ╰──────────────────╯
    ),
 
    [LAYER_POINTER] = LAYOUT(
    // ╭──────────────────────────────────────────────────────╮ ╭──────────────────────────────────────────────────────╮
-        QK_BOOT,  EE_CLR, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, QK_BOOT,  EE_CLR,
+         QK_BOOT,  EE_CLR, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, QK_BOOT,  EE_CLR,
    // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
-        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, DPI_MOD, S_D_MOD,    S_D_MOD, DPI_MOD, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, DPI_MOD, S_D_MOD,    S_D_MOD, DPI_MOD, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
    // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
-        XXXXXXX, KC_LGUI, KC_LALT, KC_LCTL, KC_LSFT, XXXXXXX,    XXXXXXX, KC_RSFT, KC_RCTL, KC_RALT, KC_RGUI, XXXXXXX,
+         XXXXXXX, KC_LGUI, KC_LALT, KC_LCTL, KC_LSFT, XXXXXXX,    XXXXXXX, KC_RSFT, KC_RCTL, KC_RALT, KC_RGUI, XXXXXXX,
    // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
-        XXXXXXX, _______, DRGSCRL, SNIPING, XXXXXXX, XXXXXXX,    XXXXXXX, XXXXXXX, SNIPING, DRGSCRL, _______, XXXXXXX,
+         XXXXXXX, _______, DRGSCRL, SNIPING, XXXXXXX, XXXXXXX,    XXXXXXX, XXXXXXX, SNIPING, DRGSCRL, _______, XXXXXXX,
    // ╰──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────╯
-                                   KC_BTN2, KC_BTN1, KC_BTN3,    KC_BTN3, KC_BTN1,
+                                    KC_BTN2, KC_BTN1, KC_BTN3,    KC_BTN3, KC_BTN1,
                                             XXXXXXX, KC_BTN2,    KC_BTN2
    //                            ╰───────────────────────────╯ ╰──────────────────╯
    )
@@ -158,3 +158,4 @@
  // Forward-declare this helper function since it is defined in rgb_matrix.c.
  void rgb_matrix_update_pwm_buffers(void);
  #endif
+
