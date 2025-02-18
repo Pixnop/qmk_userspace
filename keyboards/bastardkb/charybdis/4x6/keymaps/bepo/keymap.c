@@ -45,7 +45,7 @@
 
  #define LOWER MO(LAYER_LOWER)
  #define RAISE MO(LAYER_RAISE)
- #define PT_Z LT(LAYER_POINTER, BP_Z)
+ #define PT_W LT(LAYER_POINTER, BP_W)
  #define PT_F LT(LAYER_POINTER, BP_F)
 
  #ifndef POINTING_DEVICE_ENABLE
@@ -57,20 +57,20 @@
 
  // clang-format off
  const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-   [LAYER_BASE] = LAYOUT(
-   // ╭──────────────────────────────────────────────────────╮ ╭──────────────────────────────────────────────────────╮
-         KC_ESC,  BP_DLR, BP_DQUO, BP_LDAQ, BP_RDAQ, BP_LPRN,    BP_RPRN,   BP_AT, BP_PLUS, BP_MINS, BP_SLSH, BP_ASTR,
-   // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
-         KC_TAB,     BP_B, BP_EACU,    BP_P,    BP_O, BP_EGRV,    BP_DCIR,    BP_V,    BP_D,    BP_L,    BP_J,    BP_Z,
-   // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
-        KC_LSFT,     BP_A,    BP_U,    BP_I,    BP_E, BP_COMM,       BP_C,    BP_T,    BP_S,    BP_R,    BP_N,    BP_M,
-   // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
-        KC_LCTL,    PT_Z,    BP_Y,    BP_X,  BP_DOT,    BP_K,    BP_QUOT,    BP_Q,    BP_G,    BP_H,    PT_F, KC_LALT,
-   // ╰──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────╯
-                                    KC_LGUI, KC_SPC,   LOWER,      RAISE,  KC_ENT,
-                                            KC_LALT, KC_BSPC,     KC_DEL
-   //                            ╰───────────────────────────╯ ╰──────────────────╯
-   ),
+    [LAYER_BASE] = LAYOUT(
+    // ╭──────────────────────────────────────────────────────╮ ╭──────────────────────────────────────────────────────╮
+          KC_ESC,  BP_DLR, BP_DQUO, BP_LDAQ, BP_RDAQ, BP_LPRN,    BP_RPRN,   BP_AT, BP_PLUS, BP_MINS, BP_SLSH, BP_ASTR,
+    // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
+          KC_TAB,     BP_B, BP_EACU,    BP_P,    BP_O, BP_EGRV,    BP_DCIR,    BP_V,    BP_D,    BP_L,    BP_J,    BP_W,
+    // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
+         KC_LSFT,     BP_A,    BP_U,    BP_I,    BP_E, BP_COMM,       BP_C,    BP_T,    BP_S,    BP_R,    BP_N,    BP_M,
+    // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
+         KC_LCTL,    PT_W,    BP_Y,    BP_X,  BP_DOT,    BP_K,    BP_QUOT,    BP_Q,    BP_G,    BP_H,    PT_F, KC_LALT,
+    // ╰──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────╯
+                                     KC_LGUI, KC_SPC,   LOWER,      RAISE,  KC_ENT,
+                                             KC_LALT, KC_BSPC,     KC_DEL
+    //                            ╰───────────────────────────╯ ╰──────────────────╯
+    ),
 
    [LAYER_LOWER] = LAYOUT(
    // ╭──────────────────────────────────────────────────────╮ ╭──────────────────────────────────────────────────────╮
