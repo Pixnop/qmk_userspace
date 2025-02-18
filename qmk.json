@@ -2,6 +2,7 @@
     "userspace_version": "1.0",
     "build_targets": [
         ["bastardkb/charybdis/4x6", "vendor"],
+        ["bastardkb/charybdis/4x6", "azerty"],
         ["bastardkb/charybdis/3x6", "vendor"],
         ["bastardkb/charybdis/3x5", "vendor"],
         ["bastardkb/dilemma/4x6_4", "vendor"],
