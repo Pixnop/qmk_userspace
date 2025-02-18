@@ -1,0 +1,177 @@
+[
+  {
+    "name": "Charybdis AZERTY - Pointer Layer"
+  },
+  [
+    {
+      "x": 0.5,
+      "c": "#EF9A9A"
+    },
+    "RESET",
+    "EE\nClear",
+    {
+      "c": "#CCCCCC",
+      "a": 7
+    },
+    "",
+    "",
+    "",
+    "",
+    {
+      "x": 1
+    },
+    "",
+    "",
+    "",
+    "",
+    {
+      "c": "#EF9A9A",
+      "a": 4
+    },
+    "RESET",
+    "EE\nClear"
+  ],
+  [
+    {
+      "x": 0.5,
+      "c": "#CCCCCC",
+      "a": 7
+    },
+    "",
+    "",
+    "",
+    "",
+    {
+      "c": "#B2EBF2",
+      "a": 4
+    },
+    "DPI\nMod",
+    "Speed\nMod",
+    {
+      "x": 1
+    },
+    "Speed\nMod",
+    "DPI\nMod",
+    {
+      "c": "#CCCCCC",
+      "a": 7
+    },
+    "",
+    "",
+    "",
+    ""
+  ],
+  [
+    {
+      "x": 0.5
+    },
+    "",
+    {
+      "a": 4
+    },
+    "LGui",
+    "LAlt",
+    "LCtrl",
+    "LShift",
+    {
+      "a": 7
+    },
+    "",
+    {
+      "x": 1
+    },
+    "",
+    {
+      "a": 4
+    },
+    "RShift",
+    "RCtrl",
+    "RAlt",
+    "RGui",
+    {
+      "a": 7
+    },
+    ""
+  ],
+  [
+    {
+      "x": 0.5
+    },
+    "",
+    {
+      "c": "#B3E5FC",
+      "a": 4
+    },
+    "Pointer",
+    {
+      "c": "#B2EBF2"
+    },
+    "Drag\nScroll",
+    "Sniping",
+    {
+      "c": "#CCCCCC",
+      "a": 7
+    },
+    "",
+    "",
+    {
+      "x": 1
+    },
+    "",
+    "",
+    {
+      "c": "#B2EBF2",
+      "a": 4
+    },
+    "Sniping",
+    "Drag\nScroll",
+    {
+      "c": "#B3E5FC"
+    },
+    "Pointer",
+    {
+      "c": "#CCCCCC",
+      "a": 7
+    },
+    ""
+  ],
+  [
+    {
+      "x": 3.5,
+      "c": "#90CAF9",
+      "a": 4,
+      "w": 1.25
+    },
+    "Button 2",
+    {
+      "w": 1.25
+    },
+    "Button 1",
+    "Button 3",
+    {
+      "x": 1
+    },
+    "Button 3",
+    {
+      "w": 1.25
+    },
+    "Button 1"
+  ],
+  [
+    {
+      "x": 4.75,
+      "c": "#CCCCCC",
+      "a": 7
+    },
+    "",
+    {
+      "c": "#90CAF9",
+      "a": 4
+    },
+    "Button 2",
+    {
+      "x": 1
+    },
+    "Button 2"
+  ]
+]
