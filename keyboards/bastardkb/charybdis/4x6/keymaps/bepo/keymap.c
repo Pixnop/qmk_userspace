@@ -55,6 +55,8 @@
  #    define SNIPING KC_NO
  #endif // !POINTING_DEVICE_ENABLE
 
+#define CHARYBDIS_DRAGSCROLL_REVERSE_Y
+
  // clang-format off
  const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    [LAYER_BASE] = LAYOUT(
@@ -63,12 +65,12 @@
    // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
          KC_TAB,     BP_B, BP_EACU,    BP_P,    BP_O, BP_EGRV,    BP_DCIR,    BP_V,    BP_D,    BP_L,    BP_J,    BP_Z,
    // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
-        KC_RALT,     BP_A,    BP_U,    BP_I,    BP_E, BP_COMM,       BP_C,    BP_T,    BP_S,    BP_R,    BP_N,    BP_M,
+        KC_LGUI,     BP_A,    BP_U,    BP_I,    BP_E, BP_COMM,       BP_C,    BP_T,    BP_S,    BP_R,    BP_N,    BP_M,
    // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
         KC_LCTL,  PT_ECIR, BP_AGRV,    BP_Y,    BP_X,  BP_DOT,       BP_K, BP_QUOT,    BP_Q,    BP_G,    BP_H,    PT_F,
    // ╰──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────╯
-                                    KC_LGUI,   KC_SPC,   LOWER,      RAISE,  KC_ENT,
-                                           KC_LSFT, KC_BSPC,         KC_DEL
+                                    KC_BSPC,   KC_SPC, LOWER,      RAISE,  KC_ENT,
+                                           KC_LSFT,  KC_RALT,         KC_DEL
    //                            ╰───────────────────────────╯ ╰──────────────────╯
    ),
 
@@ -76,9 +78,9 @@
    // ╭──────────────────────────────────────────────────────╮ ╭──────────────────────────────────────────────────────╮
          KC_TILD,    BP_1,    BP_2,    BP_3,    BP_4,    BP_5,       BP_6,    BP_7,    BP_8,    BP_9,    BP_0, BP_DEG,
    // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
-         RGB_MOD, BP_CCED,    BP_W, XXXXXXX, XXXXXXX, XXXXXXX,    BP_LBRC,   KC_P7,   KC_P8,   KC_P9, BP_RBRC, XXXXXXX,
+   RGB_MOD, LCTL(BP_A), LCTL(BP_Z), LCTL(BP_Y), LCTL(BP_X),XXXXXXX, BP_LBRC,   KC_P7,   KC_P8,   KC_P9, BP_RBRC, XXXXXXX,
    // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
-         RGB_TOG, KC_LGUI, KC_LALT, KC_LCTL, KC_LSFT, XXXXXXX,    BP_PLUS,   KC_P4,   KC_P5,   KC_P6, BP_MINS,  BP_EQL,
+      RGB_TOG, BP_CCED, BP_W, LCTL(BP_C), LCTL(BP_V), XXXXXXX,    BP_PLUS,   KC_P4,   KC_P5,   KC_P6, BP_MINS,  BP_EQL,
    // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
         RGB_RMOD, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,    BP_ASTR,   KC_P1,   KC_P2,   KC_P3, BP_SLSH, BP_DOT,
    // ╰──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────╯
