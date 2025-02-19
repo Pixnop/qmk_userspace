@@ -27,6 +27,8 @@
      LAYER_RAISE,
      LAYER_POINTER,
  };
+ê
+#define CHARYBDIS_DRAGSCROLL_REVERSE_Y
 
  /** \brief Automatically enable sniping-mode on the pointer layer. */
  #define CHARYBDIS_AUTO_SNIPING_ON_LAYER LAYER_POINTER
@@ -55,7 +57,6 @@
  #    define SNIPING KC_NO
  #endif // !POINTING_DEVICE_ENABLE
 
-#define CHARYBDIS_DRAGSCROLL_REVERSE_Y
 
  // clang-format off
  const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -78,11 +79,11 @@
    // ╭──────────────────────────────────────────────────────╮ ╭──────────────────────────────────────────────────────╮
          KC_TILD,    BP_1,    BP_2,    BP_3,    BP_4,    BP_5,       BP_6,    BP_7,    BP_8,    BP_9,    BP_0, BP_DEG,
    // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
-   RGB_MOD, LCTL(BP_A), LCTL(BP_Z), LCTL(BP_Y), LCTL(BP_X),XXXXXXX, BP_LBRC,   KC_P7,   KC_P8,   KC_P9, BP_RBRC, XXXXXXX,
+         RGB_MOD, XXXXX, XXXX, LCTL(BP_Z), LCTL(BP_Y), XXXXXX,    BP_LBRC,   KC_P7,   KC_P8,   KC_P9, BP_RBRC, XXXXXXX,
    // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
-      RGB_TOG, BP_CCED, BP_W, LCTL(BP_C), LCTL(BP_V), XXXXXXX,    BP_PLUS,   KC_P4,   KC_P5,   KC_P6, BP_MINS,  BP_EQL,
+         RGB_TOG, BP_CCED, BP_W, LCTL(BP_C), LCTL(BP_V), XXXX,    BP_PLUS,   KC_P4,   KC_P5,   KC_P6, BP_MINS,  BP_EQL,
    // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
-        RGB_RMOD, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,    BP_ASTR,   KC_P1,   KC_P2,   KC_P3, BP_SLSH, BP_DOT,
+        RGB_RMOD, XXXX, XXXX, LCTL(BP_A), LCTL(BP_X), XXXXXXX,    BP_ASTR,   KC_P1,   KC_P2,   KC_P3, BP_SLSH, BP_DOT,
    // ╰──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────╯
                                     XXXXXXX, XXXXXXX, _______,    XXXXXXX, _______,
                                             XXXXXXX, XXXXXXX,      KC_P0
