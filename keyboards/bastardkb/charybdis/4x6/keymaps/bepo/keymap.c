@@ -79,11 +79,11 @@
    // ╭──────────────────────────────────────────────────────╮ ╭──────────────────────────────────────────────────────╮
          KC_TILD,    BP_1,    BP_2,    BP_3,    BP_4,    BP_5,       BP_6,    BP_7,    BP_8,    BP_9,    BP_0, BP_DEG,
    // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
-         RGB_MOD, XXXXX, XXXX, LCTL(BP_Z), LCTL(BP_Y), XXXXXX,    BP_LBRC,   KC_P7,   KC_P8,   KC_P9, BP_RBRC, XXXXXXX,
+         RGB_MOD, XXXXXXX, XXXXXXX, LCTL(BP_Z), LCTL(BP_Y), XXXXXXX,    BP_LBRC,   KC_P7,   KC_P8,   KC_P9, BP_RBRC, XXXXXXX,
    // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
-         RGB_TOG, BP_CCED, BP_W, LCTL(BP_C), LCTL(BP_V), XXXX,    BP_PLUS,   KC_P4,   KC_P5,   KC_P6, BP_MINS,  BP_EQL,
+         RGB_TOG, BP_CCED,    BP_W, LCTL(BP_C), LCTL(BP_V), XXXXXXX,    BP_PLUS,   KC_P4,   KC_P5,   KC_P6, BP_MINS,  BP_EQL,
    // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
-        RGB_RMOD, XXXX, XXXX, LCTL(BP_A), LCTL(BP_X), XXXXXXX,    BP_ASTR,   KC_P1,   KC_P2,   KC_P3, BP_SLSH, BP_DOT,
+        RGB_RMOD, XXXXXXX, XXXXXXX, LCTL(BP_A), LCTL(BP_X), XXXXXXX,    BP_ASTR,   KC_P1,   KC_P2,   KC_P3, BP_SLSH, BP_DOT,
    // ╰──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────╯
                                     XXXXXXX, XXXXXXX, _______,    XXXXXXX, _______,
                                             XXXXXXX, XXXXXXX,      KC_P0
