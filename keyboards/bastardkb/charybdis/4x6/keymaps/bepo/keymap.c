@@ -27,7 +27,7 @@
      LAYER_RAISE,
      LAYER_POINTER,
  };
-ê
+
 #define CHARYBDIS_DRAGSCROLL_REVERSE_Y
 
  /** \brief Automatically enable sniping-mode on the pointer layer. */
