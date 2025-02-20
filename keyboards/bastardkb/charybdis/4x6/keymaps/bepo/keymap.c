@@ -86,7 +86,7 @@
         RGB_RMOD, XXXXXXX, XXXXXXX, LCTL(BP_A), LCTL(BP_X), XXXXXXX,    BP_ASTR,   KC_P1,   KC_P2,   KC_P3, BP_SLSH, BP_DOT,
    // ╰──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────╯
                                     XXXXXXX, XXXXXXX, _______,    XXXXXXX, _______,
-                                            XXXXXXX, XXXXXXX,      KC_P0
+                                            KC_LSFT, KC_RALT,      KC_P0KC_LSFT,
    //                            ╰───────────────────────────╯ ╰──────────────────╯
    ),
 
