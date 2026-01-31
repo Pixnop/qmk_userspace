@@ -190,26 +190,14 @@ void matrix_scan_user(void) {
 }
 #    endif
 
-#    ifdef CHARYBDIS_AUTO_SNIPING_ON_LAYER
 layer_state_t layer_state_set_user(layer_state_t state) {
     // Tri-layer: Lower + Raise = Adjust
     state = update_tri_layer_state(state, LAYER_LOWER, LAYER_RAISE, LAYER_ADJUST);
+#    ifdef CHARYBDIS_AUTO_SNIPING_ON_LAYER
     // Auto-sniping on pointer layer
     charybdis_set_pointer_sniping_enabled(layer_state_cmp(state, CHARYBDIS_AUTO_SNIPING_ON_LAYER));
-    return state;
-}
-#    else
-layer_state_t layer_state_set_user(layer_state_t state) {
-    // Tri-layer: Lower + Raise = Adjust
-    return update_tri_layer_state(state, LAYER_LOWER, LAYER_RAISE, LAYER_ADJUST);
-}
 #    endif
-#endif
-
-#ifndef POINTING_DEVICE_ENABLE
-layer_state_t layer_state_set_user(layer_state_t state) {
-    // Tri-layer: Lower + Raise = Adjust
-    return update_tri_layer_state(state, LAYER_LOWER, LAYER_RAISE, LAYER_ADJUST);
+    return state;
 }
 #endif
 
