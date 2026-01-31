@@ -163,6 +163,17 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 };
 // clang-format on
 
+// Tri-layer: Lower + Raise = Adjust
+layer_state_t layer_state_set_user(layer_state_t state) {
+    state = update_tri_layer_state(state, LAYER_LOWER, LAYER_RAISE, LAYER_ADJUST);
+#ifdef POINTING_DEVICE_ENABLE
+#    ifdef CHARYBDIS_AUTO_SNIPING_ON_LAYER
+    charybdis_set_pointer_sniping_enabled(layer_state_cmp(state, CHARYBDIS_AUTO_SNIPING_ON_LAYER));
+#    endif
+#endif
+    return state;
+}
+
 #ifdef POINTING_DEVICE_ENABLE
 #    ifdef CHARYBDIS_AUTO_POINTER_LAYER_TRIGGER_ENABLE
 report_mouse_t pointing_device_task_user(report_mouse_t mouse_report) {
@@ -189,16 +200,6 @@ void matrix_scan_user(void) {
     }
 }
 #    endif
-
-layer_state_t layer_state_set_user(layer_state_t state) {
-    // Tri-layer: Lower + Raise = Adjust
-    state = update_tri_layer_state(state, LAYER_LOWER, LAYER_RAISE, LAYER_ADJUST);
-#    ifdef CHARYBDIS_AUTO_SNIPING_ON_LAYER
-    // Auto-sniping on pointer layer
-    charybdis_set_pointer_sniping_enabled(layer_state_cmp(state, CHARYBDIS_AUTO_SNIPING_ON_LAYER));
-#    endif
-    return state;
-}
 #endif
 
 #ifdef RGB_MATRIX_ENABLE
