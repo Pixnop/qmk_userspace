@@ -39,9 +39,9 @@ static uint16_t auto_pointer_layer_timer = 0;
 #    endif
 #endif
 
-// Layer keys
-#define LOWER MO(LAYER_LOWER)
-#define RAISE MO(LAYER_RAISE)
+// Layer keys - using TRI_LAYER feature (Lower + Raise = Adjust)
+#define LOWER TL_LOWR
+#define RAISE TL_UPPR
 #define PT_ECIR LT(LAYER_POINTER, BP_ECIR)
 #define PT_F LT(LAYER_POINTER, BP_F)
 
@@ -190,15 +190,13 @@ void matrix_scan_user(void) {
 }
 #    endif
 
-layer_state_t layer_state_set_user(layer_state_t state) {
-    // Tri-layer: Lower + Raise = Adjust
-    state = update_tri_layer_state(state, LAYER_LOWER, LAYER_RAISE, LAYER_ADJUST);
 #    ifdef CHARYBDIS_AUTO_SNIPING_ON_LAYER
+layer_state_t layer_state_set_user(layer_state_t state) {
     // Auto-sniping on pointer layer
     charybdis_set_pointer_sniping_enabled(layer_state_cmp(state, CHARYBDIS_AUTO_SNIPING_ON_LAYER));
-#    endif
     return state;
 }
+#    endif
 #endif
 
 #ifdef RGB_MATRIX_ENABLE
