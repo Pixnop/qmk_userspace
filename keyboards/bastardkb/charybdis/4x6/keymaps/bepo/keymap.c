@@ -95,7 +95,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //   RGB      {        }       Sel All   Cut      Paste       €        1        2        3        .       Enter
        BP_PERC, BP_LCBR, BP_RCBR, LCTL(BP_A), LCTL(BP_X), LCTL(BP_V), BP_EURO, KC_P1, KC_P2, KC_P3,  BP_DOT,  KC_ENT,
   // ╰──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────╯
-                                   XXXXXXX, XXXXXXX, _______,    XXXXXXX, KC_P0,
+                                   _______, _______, _______,    _______, KC_P0,
                                            KC_LSFT, KC_RALT,     BP_DOT
   // ╰──────────────────────────────────────────────────────╯ ╰──────────────────────────────────────────────────────╯
   ),
@@ -118,8 +118,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //   Prev     Home     PgUp     PgDn     End      PrtSc       ±        ÷        ×        ≠        ≤       Vol-
         KC_MPRV, KC_HOME, KC_PGUP, KC_PGDN,  KC_END, KC_PSCR,    BP_PLMN,  BP_DIV,  BP_MUL, BP_NEQL, BP_LEQL, KC_VOLD,
   // ╰──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────╯
-                                   _______, _______, XXXXXXX,    _______, XXXXXXX,
-                                           _______, _______,    XXXXXXX
+                                   _______, _______, _______,    _______, _______,
+                                           _______, _______,    _______
   // ╰──────────────────────────────────────────────────────╯ ╰──────────────────────────────────────────────────────╯
   ),
 
