@@ -19,7 +19,7 @@
 [{x:4.5,c:"#BDBDBD"},"","",{x:1,c:"#CCCCCC"},""],
 [{x:0.5,c:"#EF5350"},"Boot","CLR",{c:"#CCCCCC"},"","","","",{x:1},"","","","",{c:"#EF5350"},"CLR","Boot"],
 [{x:0.5,c:"#90CAF9"},"RGB+","Hue+","Sat+","Val+",{c:"#B3E5FC"},"DPI+","DPI-",{x:1},"DPI-","DPI+",{c:"#90CAF9"},"Val+","Sat+","Hue+","RGB+"],
-[{x:0.5,c:"#90CAF9"},"RGB",{c:"#BDBDBD"},"GUI","Alt","Ctrl","Shft",{c:"#CCCCCC"},"",{x:1},"",{c:"#BDBDBD"},"Shft","Ctrl","Alt","GUI",{c:"#90CAF9"},"RGB"],
+[{x:0.5,c:"#90CAF9"},"RGB","Hue-","Sat-","Val-",{c:"#BDBDBD"},"Shft",{c:"#CCCCCC"},"",{x:1},"",{c:"#BDBDBD"},"Shft",{c:"#90CAF9"},"Val-","Sat-","Hue-","RGB"],
 [{x:0.5,c:"#90CAF9"},"RGB-",{c:"#B3E5FC"},"Ê",{c:"#FFF59D"},"Scroll","Snipe",{c:"#CCCCCC"},"","",{x:1},"","",{c:"#FFF59D"},"Snipe","Scroll",{c:"#B3E5FC"},"F",{c:"#90CAF9"},"RGB-"],
 [{x:3.5,c:"#A5D6A7"},"BTN2","BTN1","BTN3",{x:1},"BTN3","BTN1"],
 [{x:4.5,c:"#CCCCCC"},"",{c:"#A5D6A7"},"BTN2",{x:1},"BTN2"]
