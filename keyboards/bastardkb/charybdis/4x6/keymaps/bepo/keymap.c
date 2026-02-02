@@ -71,11 +71,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // LAYER_LOWER - Symboles programmation + Pavé numérique
   // ╰──────────────────────────────────────────────────────╯ ╰──────────────────────────────────────────────────────╯
   [LAYER_LOWER] = LAYOUT(
-       BP_GRV, BP_HASH, BP_EXLM, BP_QUES, BP_SCLN, BP_COLN,     BP_EQL, BP_SLSH, BP_ASTR, BP_MINS, BP_PLUS, KC_BSPC,
+       BP_GRV, BP_HASH, BP_EXLM, BP_QUES, BP_SCLN, BP_COLN,     BP_EQL,  KC_NUM, BP_ASTR, BP_MINS, BP_PLUS, KC_BSPC,
         KC_TAB, BP_PIPE, BP_BSLS, BP_TILD, BP_UNDS, LCTL(BP_Z), BP_LBRC,   KC_P7,   KC_P8,   KC_P9, BP_RBRC,  KC_DEL,
         KC_ESC, BP_LABK, BP_RABK, BP_AMPR, LCTL(BP_Y), LCTL(BP_C), BP_LPRN, KC_P4, KC_P5,   KC_P6, BP_RPRN,  BP_EQL,
        BP_PERC, BP_LCBR, BP_RCBR, LCTL(BP_A), LCTL(BP_X), LCTL(BP_V), BP_EURO, KC_P1, KC_P2, KC_P3,  BP_DOT,  KC_ENT,
-                                   _______, _______, _______,    XXXXXXX, KC_P0,
+                                   _______, _______, _______,    QK_LLCK, KC_P0,
                                            KC_LSFT, KC_RALT,     BP_DOT
   ),
 
@@ -84,10 +84,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // ╰──────────────────────────────────────────────────────╯ ╰──────────────────────────────────────────────────────╯
   [LAYER_RAISE] = LAYOUT(
          KC_F12,   KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,      KC_F6,   KC_F7,   KC_F8,   KC_F9,  KC_F10,  KC_F11,
-        KC_MNXT, BP_CCED, BP_EGRV,   KC_UP,   BP_OE,   BP_AE,    BP_CIRC,  BP_DEG, BP_PERC,   BP_AT,  BP_DLR, KC_VOLU,
+        KC_MNXT, BP_CCED, BP_EGRV,   KC_UP,   BP_OE,   BP_AE,    BP_CIRC,  BP_DEG, BP_UGRV,   BP_AT,  BP_DLR, KC_VOLU,
         KC_MPLY,  KC_TAB, KC_LEFT, KC_DOWN, KC_RGHT,  KC_INS,    KC_RSFT, KC_RCTL, KC_RALT, KC_RGUI,  KC_APP, KC_MUTE,
         KC_MPRV, KC_HOME, KC_PGUP, KC_PGDN,  KC_END, KC_PSCR,    BP_PLMN,  BP_DIV,  BP_MUL, BP_NEQL, BP_LEQL, KC_VOLD,
-                                   _______, _______, XXXXXXX,    _______, _______,
+                                   _______, _______, QK_LLCK,    _______, _______,
                                            _______, _______,    _______
   ),
 
