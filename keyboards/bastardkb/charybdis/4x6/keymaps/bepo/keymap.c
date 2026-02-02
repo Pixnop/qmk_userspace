@@ -163,9 +163,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 };
 // clang-format on
 
-// Tri-layer: Lower + Raise = Adjust (runs on BOTH sides of split keyboard)
+// Tri-layer: Lower + Raise = Adjust
+// Only run on master to avoid split keyboard sync conflicts that crash the left side
 layer_state_t layer_state_set_user(layer_state_t state) {
-    state = update_tri_layer_state(state, LAYER_LOWER, LAYER_RAISE, LAYER_ADJUST);
+    if (is_keyboard_master()) {
+        state = update_tri_layer_state(state, LAYER_LOWER, LAYER_RAISE, LAYER_ADJUST);
+    }
 #ifdef POINTING_DEVICE_ENABLE
 #    ifdef CHARYBDIS_AUTO_SNIPING_ON_LAYER
     charybdis_set_pointer_sniping_enabled(layer_state_cmp(state, CHARYBDIS_AUTO_SNIPING_ON_LAYER));
