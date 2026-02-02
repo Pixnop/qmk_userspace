@@ -92,13 +92,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
 
   // ╭──────────────────────────────────────────────────────╮ ╭──────────────────────────────────────────────────────╮
-  // LAYER_POINTER - Contrôle trackball + QK_BOOT/EE_CLR
+  // LAYER_POINTER - Contrôle trackball + RGB + QK_BOOT/EE_CLR
   // ╰──────────────────────────────────────────────────────╯ ╰──────────────────────────────────────────────────────╯
   [LAYER_POINTER] = LAYOUT(
        QK_BOOT,  EE_CLR, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,  EE_CLR, QK_BOOT,
-       XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, DPI_MOD, S_D_MOD,    S_D_MOD, DPI_MOD, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-       XXXXXXX, KC_LGUI, KC_LALT, KC_LCTL, KC_LSFT, XXXXXXX,    XXXXXXX, KC_RSFT, KC_RCTL, KC_RALT, KC_RGUI, XXXXXXX,
-       XXXXXXX, _______, DRGSCRL, SNIPING, XXXXXXX, XXXXXXX,    XXXXXXX, XXXXXXX, SNIPING, DRGSCRL, _______, XXXXXXX,
+       RGB_MOD, RGB_HUI, RGB_SAI, RGB_VAI, DPI_MOD, S_D_MOD,    S_D_MOD, DPI_MOD, RGB_VAI, RGB_SAI, RGB_HUI, RGB_MOD,
+       RGB_TOG, KC_LGUI, KC_LALT, KC_LCTL, KC_LSFT, XXXXXXX,    XXXXXXX, KC_RSFT, KC_RCTL, KC_RALT, KC_RGUI, RGB_TOG,
+      RGB_RMOD, _______, DRGSCRL, SNIPING, XXXXXXX, XXXXXXX,    XXXXXXX, XXXXXXX, SNIPING, DRGSCRL, _______,RGB_RMOD,
                                   KC_BTN2, KC_BTN1, KC_BTN3,    KC_BTN3, KC_BTN1,
                                           XXXXXXX, KC_BTN2,    KC_BTN2
   ),
