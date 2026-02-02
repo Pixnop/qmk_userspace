@@ -15,14 +15,4 @@
 #ifdef POINTING_DEVICE_ENABLE
 // Auto pointer layer trigger (décommenter pour activer)
 // #define CHARYBDIS_AUTO_POINTER_LAYER_TRIGGER_ENABLE
-#    define CHARYBDIS_AUTO_POINTER_LAYER_TRIGGER_TIMEOUT_MS 1000
-#    define CHARYBDIS_AUTO_POINTER_LAYER_TRIGGER_THRESHOLD 8
-
-// Inverse Y axis pour drag scroll (plus naturel)
-#    define CHARYBDIS_DRAGSCROLL_REVERSE_Y
 #endif
-
-// Tapping configuration
-#define TAPPING_TERM 200
-#define PERMISSIVE_HOLD
-
