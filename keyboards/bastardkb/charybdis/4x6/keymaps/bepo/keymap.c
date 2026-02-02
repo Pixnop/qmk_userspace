@@ -60,7 +60,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // ╰──────────────────────────────────────────────────────╯ ╰──────────────────────────────────────────────────────╯
   [LAYER_BASE] = LAYOUT(
         KC_ESC,  BP_DLR, BP_DQUO, BP_LDAQ, BP_RDAQ, BP_LPRN,    BP_RPRN,   BP_AT, BP_PLUS, BP_MINS, BP_SLSH, BP_ASTR,
-        KC_TAB,    BP_B,    BP_W,    BP_P,    BP_O, BP_EGRV,    BP_DCIR,    BP_V,    BP_D,    BP_L,    BP_J,    BP_Z,
+        KC_TAB,    BP_B,    BP_W,    BP_P,    BP_O, BP_EACU,    BP_DCIR,    BP_V,    BP_D,    BP_L,    BP_J,    BP_Z,
        KC_LGUI,    BP_A,    BP_U,    BP_I,    BP_E, BP_COMM,       BP_C,    BP_T,    BP_S,    BP_R,    BP_N,    BP_M,
        KC_LCTL, PT_ECIR, BP_AGRV,    BP_Y,    BP_X,  BP_DOT,       BP_K, BP_QUOT,    BP_Q,    BP_G,    BP_H,    PT_F,
                                    KC_BSPC,  KC_SPC,   LOWER,      RAISE,  KC_ENT,
@@ -84,7 +84,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // ╰──────────────────────────────────────────────────────╯ ╰──────────────────────────────────────────────────────╯
   [LAYER_RAISE] = LAYOUT(
          KC_F12,   KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,      KC_F6,   KC_F7,   KC_F8,   KC_F9,  KC_F10,  KC_F11,
-        KC_MNXT, BP_CCED, BP_EACU,   KC_UP,   BP_OE,   BP_AE,    BP_CIRC,  BP_DEG, BP_PERC,   BP_AT,  BP_DLR, KC_VOLU,
+        KC_MNXT, BP_CCED, BP_EGRV,   KC_UP,   BP_OE,   BP_AE,    BP_CIRC,  BP_DEG, BP_PERC,   BP_AT,  BP_DLR, KC_VOLU,
         KC_MPLY,  KC_TAB, KC_LEFT, KC_DOWN, KC_RGHT,  KC_INS,    KC_RSFT, KC_RCTL, KC_RALT, KC_RGUI,  KC_APP, KC_MUTE,
         KC_MPRV, KC_HOME, KC_PGUP, KC_PGDN,  KC_END, KC_PSCR,    BP_PLMN,  BP_DIV,  BP_MUL, BP_NEQL, BP_LEQL, KC_VOLD,
                                    _______, _______, XXXXXXX,    _______, _______,
